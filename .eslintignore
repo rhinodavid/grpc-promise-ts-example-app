@@ -1,0 +1,4 @@
+*.md
+*.scss
+build
+jspb

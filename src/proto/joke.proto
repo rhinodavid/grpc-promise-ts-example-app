@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package joke;
+
+enum JokeKind {
+  DOG = 0;
+  PUN = 1;
+  TEXT = 2;
+}
+
+message JokeRequest {
+  JokeKind joke_kind = 1;
+}
+
+message JokeResponse {
+  string joke = 1;
+}
+
+service Joke {
+  rpc getAJoke (JokeRequest) returns (JokeResponse);
+}
