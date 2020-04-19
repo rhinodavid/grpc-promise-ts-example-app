@@ -14,12 +14,8 @@ const buildServer = (): Server => {
 export const startServer = async (
   port: number,
   host: string = "0.0.0.0",
-  credentials?: ServerCredentials
+  credentials: ServerCredentials = ServerCredentials.createInsecure()
 ): Promise<Server> => {
-  if (!credentials) {
-    console.warn("⚠️⚠️⚠️ Using insecure credentials ⚠️⚠️⚠️");
-    credentials = ServerCredentials.createInsecure();
-  }
   const server = buildServer();
   return new Promise<Server>((resolve, reject) => {
     server.bindAsync(
