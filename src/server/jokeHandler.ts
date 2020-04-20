@@ -14,6 +14,9 @@ function randomIndex(length) {
 }
 
 class JokeHandler implements IJokeServer {
+  /**
+   * Return a joke of the joke kind provided in the request
+   */
   getAJoke = (
     call: grpc.ServerUnaryCall<JokeRequest>,
     callback: grpc.sendUnaryData<JokeResponse>

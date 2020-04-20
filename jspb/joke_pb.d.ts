@@ -8,7 +8,7 @@
  *
  * package: joke
  * file: joke.proto
- * generated at: Sun Apr 19 2020 02:19:58 GMT-0600 (Mountain Daylight Time)
+ * generated at: Mon Apr 20 2020 01:21:34 GMT-0600 (Mountain Daylight Time)
  */
 
 /* tslint:disable */
