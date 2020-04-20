@@ -1,14 +1,14 @@
 {
   "author": "David Walsh",
   "bugs": {
-    "url": "https://github.com/rhinodavid/grpc-typescript-promise-example-app/issues"
+    "url": "https://github.com/rhinodavid/grpc-promise-ts-example-app/issues"
   },
   "dependencies": {
     "get-port": "^5.1.1",
     "google-protobuf": "^3.11.4",
     "grpc": "^1.24.2",
     "grpc-promise-ts": "^0.2.1",
-    "grpc-promise-ts-generator-plugin": "^0.0.1",
+    "grpc-promise-ts-generator-plugin": "^0.1.0",
     "grpc-tools": "^1.8.1",
     "inquirer": "^7.1.0"
   },
@@ -16,9 +16,9 @@
   "devDependencies": {
     "@types/inquirer": "^6.5.0"
   },
-  "homepage": "https://github.com/rhinodavid/grpc-typescript-promise-example-app#readme",
+  "homepage": "https://github.com/rhinodavid/grpc-promise-ts-example-app#readme",
   "license": "MIT",
-  "name": "grpc-typescript-promise-example-app",
+  "name": "grpc-promise-ts-example-app",
   "scripts": {
     "build": "./scripts/generate_jspb.sh && tsc",
     "build-protos": "./scripts/generate_jspb.sh",
