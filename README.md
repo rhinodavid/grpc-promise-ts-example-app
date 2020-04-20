@@ -24,8 +24,7 @@ const response = await service.getSomething(request);
 
 ```bash
 git clone https://github.com/rhinodavid/grpc-promise-ts-example-app && \
-cd grpc-typescript-promise-example-app && \
-yarn && yarn build && yarn start
+cd grpc-promise-ts-example-app && yarn && yarn build && yarn start
 ```
 
 # How can I make an app like this?
