@@ -1387,10 +1387,10 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
-grpc-promise-ts-generator-plugin@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/grpc-promise-ts-generator-plugin/-/grpc-promise-ts-generator-plugin-0.0.1.tgz#d68624c956bdb104e093399001818326727e8ddc"
-  integrity sha512-PjTqhk/1+rfP9yPY6EOxa2UJJYKu+QgeYuRuLkOwXaBWEzVg9xcSNuiaXNFu2t0Fh9k3iwdaVOPJGR+KraxpVg==
+grpc-promise-ts-generator-plugin@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/grpc-promise-ts-generator-plugin/-/grpc-promise-ts-generator-plugin-0.1.0.tgz#2a575bf68b59f6450397f942dda3e5541efe19cc"
+  integrity sha512-oxqKMpWowNFDGS3EIqHLhkPHVpHu6GNhbUr0bieBLZ/t3pdkCxbmSKIrP5Zq9dkUWdDTbYJJ2m/96bkpgQ/NvA==
   dependencies:
     google-protobuf "3.5.0"
     handlebars "4.7.4"
