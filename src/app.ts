@@ -10,6 +10,10 @@ import { startServer } from "./server/server";
 
 const bottomBar = new inquirer.ui.BottomBar();
 
+/**
+ * Returns a random face emoji. Used to create a dynamic loading indicator
+ * while the `getAJoke` request is pending.
+ */
 function getAFace() {
   const faces = [
     "🙃",
@@ -38,7 +42,7 @@ let port: number;
 getPort().then(async (selectedPort) => {
   // setup server and client
   try {
-    port = selectedPort;
+    port = selectedPort; // `selectedPort` is an available port picked by `getPort`
     server = await startServer(port);
     jokePromiseClient = await createJokePromiseClient(port);
   } catch (e) {
@@ -58,19 +62,25 @@ getPort().then(async (selectedPort) => {
       ],
     });
 
-    // Use the users answer to create a request
+    // Use the user's answer to create a request
     const request = new JokeRequest();
     request.setJokeKind(jokeKind);
+    // TODO: Once https://github.com/grpc/grpc-node/pull/1370 merges the setter will return the
+    // message and the two lines above can be combined
 
+    // Make the animated pending message
     const handle = setInterval(() => {
       bottomBar.updateBottomBar(getFetchingDisplay());
-    }, 750); // (makes the waiting message animate)
+    }, 750);
 
     // Send our request to the server and get the response
     const response = await jokePromiseClient.getAJoke(request);
 
+    // stop and clear the pending message
     clearInterval(handle);
     bottomBar.updateBottomBar("");
+
+    // show the user their joke
     console.info("😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆");
     console.info(`\n${response.getJoke()}\n`);
     console.info("😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆");
