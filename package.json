@@ -9,7 +9,7 @@
     "grpc": "^1.24.2",
     "grpc-promise-ts": "^0.2.1",
     "grpc-tools": "^1.8.1",
-    "grpc-tools-node-protoc-promise-ts": "^0.0.2",
+    "grpc-tools-node-protoc-promise-ts": "^0.0.4",
     "inquirer": "^7.1.0"
   },
   "description": "A Typescript/gRPC example with Promises",
@@ -20,10 +20,11 @@
   "license": "MIT",
   "name": "grpc-typescript-promise-example",
   "scripts": {
-    "build": "./scripts/protoc.sh && tsc",
-    "build-protos": "./scripts/protoc.sh",
-    "start": "node ./__build__/index.js",
-    "watch": "./scripts/protoc.sh && tsc -w"
+    "build": "./scripts/generate_jspb.sh && tsc",
+    "build-protos": "./scripts/generate_jspb.sh",
+    "debug": "node --nolazy --inspect-brk=9229 ./__build__/app.js",
+    "start": "node ./__build__/app.js",
+    "watch": "./scripts/generate_jspb.sh && tsc -w"
   },
   "version": "0.1.0"
 }

@@ -1408,10 +1408,10 @@ grpc-promise-ts@^0.2.1:
     ts-lib "^0.0.5"
     typescript "^3.8.3"
 
-grpc-tools-node-protoc-promise-ts@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/grpc-tools-node-protoc-promise-ts/-/grpc-tools-node-protoc-promise-ts-0.0.2.tgz#d462e46c0c54a70ca436cc2d93737b7c727ea49e"
-  integrity sha512-mATcmI1nKJBlVOqDDrGH6GF3xxcuon8Kn4kEsqRhx4pm2w8CQfI9jjJSF1qO+sLwpN5A9IknI9UndH4A2n/Xkg==
+grpc-tools-node-protoc-promise-ts@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/grpc-tools-node-protoc-promise-ts/-/grpc-tools-node-protoc-promise-ts-0.0.4.tgz#298f6c2f7ae5dacad2822dc535c7cb48e7239538"
+  integrity sha512-zHUtgXB9XucdCbAxTZ35jfaK3KnCsaFsW+Xfkxu5b/2dF5jNsLqkkYAjCdGMT3I4tnNque/CV8Bvlw/9YRwocw==
   dependencies:
     google-protobuf "3.5.0"
     handlebars "4.7.4"

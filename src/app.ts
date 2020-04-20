@@ -3,6 +3,7 @@ import { JokeKind, JokeRequest } from "../jspb/joke_pb";
 import { Server, credentials } from "grpc";
 
 import { convertToPromiseClient } from "grpc-promise-ts";
+import { createJokePromiseClient } from "./client/createJokePromiseClient";
 import getPort from "get-port";
 import inquirer from "inquirer";
 import { startServer } from "./server/server";
@@ -35,20 +36,17 @@ let server: Server;
 let port: number;
 
 getPort().then(async (selectedPort) => {
+  // setup server and client
   try {
     port = selectedPort;
     server = await startServer(port);
-    jokePromiseClient = convertToPromiseClient(
-      new JokeClient(`0.0.0.0:${port}`, credentials.createInsecure())
-    );
-    await new Promise((resolve, reject) => {
-      jokePromiseClient.waitForReady(Date.now() + 10000, (e) => {
-        if (e) {
-          reject(e);
-        }
-        resolve();
-      });
-    });
+    jokePromiseClient = await createJokePromiseClient(port);
+  } catch (e) {
+    console.error(`Server/client setup failed: ${e}`);
+  }
+
+  try {
+    // Setup the CLI
     const { jokeKind } = await inquirer.prompt({
       type: "list",
       name: "jokeKind",
@@ -59,14 +57,18 @@ getPort().then(async (selectedPort) => {
         { name: "😞 A (terrible) pun)", value: JokeKind.PUN },
       ],
     });
+
+    // Use the users answer to create a request
     const request = new JokeRequest();
     request.setJokeKind(jokeKind);
 
     const handle = setInterval(() => {
       bottomBar.updateBottomBar(getFetchingDisplay());
-    }, 750);
+    }, 750); // (makes the waiting message animate)
 
+    // Send our request to the server and get the response
     const response = await jokePromiseClient.getAJoke(request);
+
     clearInterval(handle);
     bottomBar.updateBottomBar("");
     console.info("😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆😆");
@@ -76,6 +78,7 @@ getPort().then(async (selectedPort) => {
     console.error(e.stack);
     process.exit(1);
   }
+  // shut down the client and server
   jokePromiseClient.close();
   server.forceShutdown();
 });

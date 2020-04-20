@@ -19,6 +19,6 @@ ${PROTOC} \
   --plugin=protoc-gen-grpc="${NODE_PLUGIN}" \
   --grpc_out="./${OUT_DIR}" \
   --plugin=protoc-gen-tspromise="${TYPESCRIPT_PLUGIN}" \
-  --tspromise_out="./${OUT_DIR}" \
+  --tspromise_out=gen-promise-clients:"./${OUT_DIR}" \
   -I "${PROTO_DIR}" \
   "${PROTO_DIR}"/*.proto
