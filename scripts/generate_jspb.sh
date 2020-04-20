@@ -10,7 +10,7 @@ cd "${BASEDIR}"/../
 
 PROTOC="./node_modules/.bin/grpc_tools_node_protoc" # the main binary
 NODE_PLUGIN="./node_modules/.bin/grpc_tools_node_protoc_plugin" # plugin to generate Node/js implementation
-TYPESCRIPT_PLUGIN="./node_modules/.bin/grpc-tools-node-typescript-promise-plugin" # plugin to generate Typescript definition
+TYPESCRIPT_PLUGIN="./node_modules/.bin/grpc-promise-ts-generator-plugin" # plugin to generate Typescript definitions
 
 mkdir -p "./${OUT_DIR}"
 

@@ -1387,6 +1387,17 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
+grpc-promise-ts-generator-plugin@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/grpc-promise-ts-generator-plugin/-/grpc-promise-ts-generator-plugin-0.0.1.tgz#d68624c956bdb104e093399001818326727e8ddc"
+  integrity sha512-PjTqhk/1+rfP9yPY6EOxa2UJJYKu+QgeYuRuLkOwXaBWEzVg9xcSNuiaXNFu2t0Fh9k3iwdaVOPJGR+KraxpVg==
+  dependencies:
+    google-protobuf "3.5.0"
+    handlebars "4.7.4"
+    handlebars-helpers "0.10.0"
+    import-sort-parser-typescript "^6.0.0"
+    prettier "^2.0.4"
+
 grpc-promise-ts@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/grpc-promise-ts/-/grpc-promise-ts-0.2.1.tgz#11e0b629b48cb352543ea4984180dfbc63174002"
@@ -1407,17 +1418,6 @@ grpc-promise-ts@^0.2.1:
     rollup-plugin-typescript2 "^0.27.0"
     ts-lib "^0.0.5"
     typescript "^3.8.3"
-
-grpc-tools-node-protoc-promise-ts@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/grpc-tools-node-protoc-promise-ts/-/grpc-tools-node-protoc-promise-ts-0.0.4.tgz#298f6c2f7ae5dacad2822dc535c7cb48e7239538"
-  integrity sha512-zHUtgXB9XucdCbAxTZ35jfaK3KnCsaFsW+Xfkxu5b/2dF5jNsLqkkYAjCdGMT3I4tnNque/CV8Bvlw/9YRwocw==
-  dependencies:
-    google-protobuf "3.5.0"
-    handlebars "4.7.4"
-    handlebars-helpers "0.10.0"
-    import-sort-parser-typescript "^6.0.0"
-    prettier "^2.0.4"
 
 grpc-tools@^1.8.1:
   version "1.8.1"
