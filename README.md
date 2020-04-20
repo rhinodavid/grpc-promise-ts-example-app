@@ -1,9 +1,9 @@
 # Typescript, gRPC, and **Promises**
 
-![Screenshot of the joke command line app](./screencap.png)
-
 > A minimal command line app to serve as an example of how create a node
 > **Typescript** project which uses **gRPC** with **Promises**
+
+![Screenshot of the joke command line app](./screencap.png)
 
 And it tells you a joke.
 
