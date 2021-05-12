@@ -6,7 +6,7 @@
   "dependencies": {
     "get-port": "^5.1.1",
     "google-protobuf": "^3.11.4",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "grpc-promise-ts": "^0.2.1",
     "grpc-promise-ts-generator-plugin": "^0.1.0",
     "grpc-tools": "^1.8.1",
